@@ -1,12 +1,16 @@
 # Creating a dictionary of inventory
-inventory = {"Lays": {"price": 10.0, "quantity": 100},
-             "Kurkure": {"price": 30.0, "quantity": 50},
-             "Bingo": {"price": 20.0, "quantity": 150},
-             "Maggie": {"price": 20.0, "quantity": 50},
-             "Maaza": {"price": 42.0, "quantity": 70},
-             "Pepsi": {"price": 20.0, "quantity": 80}}
-
-cred = ("admin", "1234")
+inventory = {"lays": {"price": 10.0, "quantity": 100},
+             "kurkure": {"price": 30.0, "quantity": 50},
+             "bingo": {"price": 20.0, "quantity": 150},
+             "maggie": {"price": 20.0, "quantity": 50},
+             "maaza": {"price": 42.0, "quantity": 70},
+             "pepsi": {"price": 20.0, "quantity": 80}}
+# def lower_dict(d):
+#     return {k.lower(): v.lower() for k, v in inventory.items()}
+# result = lower_dict(inventory)
+# lower_dict()
+#cred = ("admin", "1234")
+cred=('','')
 # Customers with and without membership
 customers = {"akhil": {"member": "yes"},
              "sonu": {"member": "no"},
@@ -113,7 +117,17 @@ def Billing():
                     print(f"\033[91mProduct {product} not in bill!\033[00m")
 
             elif sub_command == 4:
-                print(f"Total bill is: {total_bill}")
+                discount=0.0
+                customer_name=input("Enter name to check membership:")
+                if customers[customer_name]['member']=='yes':
+                    discount=total_bill*0.1
+                    discounted_bill=total_bill-discount
+                    print(f"Discount: {discount}")
+                    print(f"Total bill is: {discounted_bill}")
+                else:
+                    print(f"Discount: {discount}")
+                    print(f"Total bill is:{total_bill}")
+                    print(f"")
                 break
 
             elif sub_command == 5:

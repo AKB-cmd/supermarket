@@ -38,8 +38,8 @@ Before you begin, ensure you have met the following requirements:
 
 1. Run the script:
 2.  Log in using the default credentials:
-- Username: admin
-- Password: 1234
+- Username: yourusername
+- Password: yourpassword
 
 3. Follow the on-screen prompts to navigate through the system:
 - Manage inventory

@@ -37,7 +37,7 @@ Before you begin, ensure you have met the following requirements:
 ## Usage
 
 1. Run the script:
-2. 2. Log in using the default credentials:
+2.  Log in using the default credentials:
 - Username: admin
 - Password: 1234
 
